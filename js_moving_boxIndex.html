@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Position Example</title>
+    <style>
+        body {
+            height: 100vh; /* Set the body height to the full viewport height */
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Prevent scrolling */
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+        .movable-box {
+            position: absolute; /* Allows the box to be positioned anywhere */
+            width: 100px; /* Width of the box */
+            height: 100px; /* Height of the box */
+            background-color: orange; /* Color of the box */
+        }
+        img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="movable-box" id="box"></div> <!-- The box to be moved -->
+    <button onclick="moveBox()">Move the Box!</button> <!-- Button to trigger the move -->
+    <h1>Here is a Cat Image</h1>
+    <img src="https://github.com/annykh/FE301023-e/blob/main/Lesson%201/media/cat.jpg?raw=true" alt="Cat" />
+
+    <script>
+        function moveBox() {
+            const box = document.getElementById("box"); // Get the box element by its ID
+            // Calculate random positions ensuring the box stays within the viewport
+            const randomX = Math.random() * (window.innerWidth - 100); // Subtract box width
+            const randomY = Math.random() * (window.innerHeight - 100); // Subtract box height
+            box.style.left = randomX + "px"; // Set a random horizontal position
+            box.style.top = randomY + "px"; // Set a random vertical position
+        }
+    </script>
+</body>
+</html>

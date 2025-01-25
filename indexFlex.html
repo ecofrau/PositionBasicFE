@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Position Example</title>
+    <style>
+      .flex-container {
+        display: flex;
+        justify-content: center; /* Центрирует элементы по горизонтали */
+        align-items: center; /* Центрирует элементы по вертикали */
+        height: 100vh; /* Высота контейнера равна высоте окна браузера */
+        background-color: lightgray; /* Цвет фона контейнера */
+      }
+
+      .flex-item {
+        width: 100px; /* Ширина элемента */
+        height: 100px; /* Высота элемента */
+        background-color: blue; /* Цвет фона элемента */
+        margin: 10px; /* Отступы между элементами */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item"></div>
+      <div class="flex-item"></div>
+      <div class="flex-item"></div>
+    </div>
+  </body>
+</html>

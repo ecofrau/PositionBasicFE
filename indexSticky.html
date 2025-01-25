@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position Example</title>
+    <style>
+        body {
+            height: 2000px; /* For demonstration of scrolling */
+        }
+
+        .sticky-header {
+            position: sticky; /* Makes the header stick to the top when scrolling */
+            top: 0; /* Position the sticky element at the top of the viewport */
+            background-color: yellow; /* Background color of the sticky header */
+            padding: 10px; /* Padding around the text in the header */
+            font-size: 20px; /* Font size of the text in the header */
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">I will stick to the top!</div> <!-- Sticky header text -->
+    <p>Scroll down to see the effect.</p> <!-- Instruction to the user -->
+</body>
+</html>
